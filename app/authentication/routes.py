@@ -13,6 +13,7 @@ def signup():
     form = UserLoginForm()
 
     try:
+        print(request, form.email.data)
         if request.method == 'POST' and form.validate_on_submit():
             email = form.email.data
             password = form.password.data

@@ -12,7 +12,7 @@ class Config():
 # below are how the app talks to the computer
     FLASK_APP = os.getenv('FLASK_APP')
     FLASK_ENV = os.getenv('FLASK_ENV')
-    SECRET_KEY = os.environ.get('SECRET_KEY') #or .get(whatever you name it)
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'Ryan will never get access to my CSS'
 
     #below are how the app talks to database
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or 'sqlite:///' + os.path.join(basedir, 'app.db')
